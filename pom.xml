@@ -49,6 +49,13 @@
             <version>21.9.0.0</version>
         </dependency>
 
+        <!-- Healenium Java Agent (core self-healing functionality) -->
+        <dependency>
+            <groupId>com.epam.healenium</groupId>
+            <artifactId>healenium-web</artifactId>
+            <version>3.5.6</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
