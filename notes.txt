@@ -1,4 +1,7 @@
-docker-compose -f docker-compose-web.yaml down -v
+docker-compose -f docker-compose-web.yaml down -v >>> wil remove all data and database
+docker-compose -f docker-compose-web.yaml down -v >>> wil remove all data and database
 docker-compose -f docker-compose-web.yaml up -d
 docker logs healenium
+docker exec -it healenium sh
+curl http://localhost:7878/actuator/health
 https://github.com/healenium/healenium-example-webdriverio
