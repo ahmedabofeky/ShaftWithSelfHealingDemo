@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Main Test">
+    <listeners>
+        <listener class-name="Utilities.LogConfiguration.ForLinux.TestExecutionListener"/>
+    </listeners>
+    <parameter name="browser" value="chrome"/>
+    <test name="Regression">
+        <groups>
+            <run>
+                 <include name="Login"/>
+            </run>
+        </groups>
+        <classes>
+            <!-- Login to SOF -->
+            <class name="testPackage.Actions.Login.LoginTest"/>
+        </classes>
+    </test>
+</suite>

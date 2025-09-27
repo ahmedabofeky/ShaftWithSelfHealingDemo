@@ -1,0 +1,31 @@
+package Pages.Main;
+
+import com.shaft.driver.SHAFT;
+import io.qameta.allure.Step;
+import org.openqa.selenium.By;
+
+public class Login {
+
+    private final SHAFT.GUI.WebDriver driver;
+
+    public Login(SHAFT.GUI.WebDriver driver) {
+        this.driver = driver;
+    }
+
+    @Step("When I navigate to the Home page.")
+    public void navigate() {
+        driver.browser().navigateToURL(ConstData.LOGIN_URL);
+    }
+
+    public void performLogin(String username, String password) {
+        driver.element().type(By.id("username"), username);
+        driver.element().type(By.id("password"), password);
+        driver.element().click(By.xpath("/html/body/app-root/app-login/div/div/div[2]/div/form/fw-button/button"));
+    }
+
+    @Step("Then I verify that the user is logged in.")
+    public void verifyUserIsLoggedIn() {
+        // Replace with actual locator if needed
+        driver.verifyThat().element(By.id(ConstData.SEARCH_USER)).isVisible().perform();
+    }
+}
