@@ -31,9 +31,10 @@ services:
       - SPRING_POSTGRES_USER=healenium_user
       - SPRING_POSTGRES_PASSWORD=YDk2nmNs4s9aCP6K
       - SPRING_POSTGRES_DB_HOST=postgres-db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/healenium?currentSchema=healenium
       - KEY_SELECTOR_URL=false
       - COLLECT_METRICS=true
-      - FIND_ELEMENTS_AUTO_HEALING=false
+      - FIND_ELEMENTS_AUTO_HEALING=true
       - HLM_LOG_LEVEL=info
     volumes:
       - ./screenshots/:/screenshots
