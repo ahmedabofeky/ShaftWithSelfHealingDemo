@@ -1,7 +1,6 @@
 package Pages.Main;
 
 import com.epam.healenium.SelfHealingDriver;
-import com.shaft.driver.SHAFT;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 

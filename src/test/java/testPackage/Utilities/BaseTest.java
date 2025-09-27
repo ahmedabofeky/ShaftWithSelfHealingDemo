@@ -11,8 +11,9 @@ import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
 
-    //    protected SHAFT.GUI.WebDriver driver; // it is a custom driver wrapper provided by the SHAFT framework. It adds a lot of features on top of Selenium (logging, reporting, self-healing, etc. — but not via Healenium by default).
-    protected SelfHealingDriver driver; //is a special WebDriver from the Healenium library. It wraps a Selenium WebDriver and adds its own self-healing logic.
+    //is a special WebDriver from the Healenium library.
+    // It wraps a Selenium WebDriver and adds its own self-healing logic.
+    protected SelfHealingDriver driver;
 
     @BeforeClass(description = "Setup Browser instance.", alwaysRun = true)
     public void beforeClass() {
