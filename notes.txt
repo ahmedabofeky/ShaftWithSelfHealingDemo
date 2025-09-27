@@ -1,0 +1,4 @@
+docker-compose -f docker-compose-web.yaml down -v
+docker-compose -f docker-compose-web.yaml up -d
+docker logs healenium
+https://github.com/healenium/healenium-example-webdriverio
