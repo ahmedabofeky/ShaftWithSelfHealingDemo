@@ -20,6 +20,6 @@ public class Login {
     public void performLogin(String email, String password) {
         driver.findElement(By.id("email")).sendKeys(email);
         driver.findElement(By.id("password")).sendKeys(password);
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        driver.findElement(By.id("login")).click();
     }
 }
