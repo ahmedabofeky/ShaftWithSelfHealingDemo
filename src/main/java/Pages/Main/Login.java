@@ -18,8 +18,8 @@ public class Login {
         driver.get(ConstData.LOGIN_URL);
     }
 
-    public void performLogin(String username, String password) {
-        driver.findElement(By.id("email")).sendKeys(username);
+    public void performLogin(String email, String password) {
+        driver.findElement(By.id("email")).sendKeys(email);
         driver.findElement(By.id("password")).sendKeys(password);
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
