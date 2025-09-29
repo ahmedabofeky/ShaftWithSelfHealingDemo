@@ -1,7 +1,6 @@
 version: "3.8"
 
 services:
-
   postgres-db:
     image: postgres:11-alpine
     container_name: postgres-db
@@ -40,7 +39,6 @@ services:
     volumes:
       - ./screenshots/:/screenshots
       - ./logs/:/logs
-      - ./reports:/healenium/report
     networks:
       - healenium
 

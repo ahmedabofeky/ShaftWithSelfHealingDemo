@@ -1,5 +1,5 @@
 docker-compose -f docker-compose-web.yaml down -v >>> wil remove all data and database
-docker-compose -f docker-compose-web.yaml down -v >>> wil remove all data and database
+docker-compose -f docker-compose-web.yaml down >>> wil not remove all data and database
 docker-compose -f docker-compose-web.yaml up -d
 docker logs healenium
 docker exec -it healenium sh

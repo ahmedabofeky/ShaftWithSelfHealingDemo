@@ -10,8 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class BaseTest {
-
-    //is a special WebDriver from the Healenium library.
+    // is a special WebDriver from the Healenium library.
     // It wraps a Selenium WebDriver and adds its own self-healing logic.
     protected SelfHealingDriver driver;
 
