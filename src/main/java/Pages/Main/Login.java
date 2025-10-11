@@ -1,25 +1,25 @@
 package Pages.Main;
 
-import com.epam.healenium.SelfHealingDriver;
+import com.shaft.driver.SHAFT;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 public class Login {
 
-    private final SelfHealingDriver driver;
+    private final SHAFT.GUI.WebDriver driver;
 
-    public Login(SelfHealingDriver driver) {
+    public Login(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
     @Step("When I navigate to the Home page.")
     public void navigate() {
-        driver.get(ConstData.LOGIN_URL);
+        driver.browser().navigateToURL(ConstData.LOGIN_URL);
     }
 
-    public void performLogin(String email, String password) {
-        driver.findElement(By.id("email")).sendKeys(email);
-        driver.findElement(By.id("password")).sendKeys(password);
-        driver.findElement(By.id("login")).click();
+    public void performLogin(String username, String password) {
+        driver.element().type(By.id("username"), username);
+        driver.element().type(By.id("password"), password);
+        driver.element().click(By.id("login"));
     }
 }
