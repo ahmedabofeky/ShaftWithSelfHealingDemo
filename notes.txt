@@ -5,3 +5,12 @@ docker logs healenium
 docker exec -it healenium sh
 curl http://localhost:7878/actuator/health
 https://github.com/healenium/healenium-example-webdriverio
+
+
+Find container:	docker ps
+Enter container:	docker exec -it postgres-db bash
+psql connect:	psql -U healenium_user -d healenium
+List schemas:	\dn
+List tables:	\dt <schema>.*
+Show table info:	\d+ <schema>.<table>
+Query table:	SELECT * FROM <schema>.<table> LIMIT 10;
